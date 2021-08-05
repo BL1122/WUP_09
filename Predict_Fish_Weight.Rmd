@@ -56,7 +56,7 @@ which.max(summary.out$adjr2)
 summary.out$which[2,]
 ```
 
-Using the summary, it states that the best two variables to use are height and width.
+Using the summary, it states that the best two variables to use to find the weight are height and width.
 
 # Bream 
 
@@ -81,7 +81,7 @@ library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
 
-In this model using Bream it appears the best two variables to use would be length 2 and height.
+In this model using Bream it appears the best two variables to use to find the weight would be length 2 and height.
 
 ```{r}
 which.max(summary.out$adjr2)
@@ -91,7 +91,7 @@ which.max(summary.out$adjr2)
 summary.out$which[2,]
 ```
 
-Using the summary plot it shows that the best two variable to use are length 2 and height. 
+Using the summary plot it shows that the best two variable to find the weight are to use length 2 and height. 
 
 # Smelt 
 
@@ -116,7 +116,7 @@ library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
 
-In this model for Smelt, it appears the best variables to use are lenght 2 and height. 
+In this model for Smelt, it appears the best variables to use to find the weight are length 2 and height. 
 
 ```{r}
 which.max(summary.out$adjr2)
@@ -126,9 +126,10 @@ which.max(summary.out$adjr2)
 summary.out$which[2,]
 ```
 
-Using the summary plot the two best variables to use will be length 2 and width.
+Using the summary plot the two best variables to find the weight  will be to use length 2 and width.
 
 
+# Conclusion
 
-
+I added three models and summary plots for perch, Bream and smelt in order to find the best two variables to find the weight of each one. The best two variables to use for perch are height and width. The best two variables for Bream to use are length 2 and height and the best two variables to use for smelt are length 2 and width. 
 
