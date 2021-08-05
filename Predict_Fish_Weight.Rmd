@@ -12,6 +12,7 @@ output:
 ```{r include=FALSE,echo=FALSE}
 require(tigerstats)
 require(tidyverse)
+allthat <- read.csv(file = "Fish.csv")
 ```
 
 # Introduction
@@ -23,4 +24,16 @@ require(tidyverse)
 
 
 # Perch
+
+```{r}
+perch <- filter(allthat,Species=="Perch")
+perch <- select(perch,-1)
+```
+
+
+
+
+
+
+
 
