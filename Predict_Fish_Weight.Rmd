@@ -30,9 +30,22 @@ perch <- filter(allthat,Species=="Perch")
 perch <- select(perch,-1)
 ```
 
+```{r}
+library(leaps)
+regsubsets.out <-
+    regsubsets(Weight ~ .,
+               data = perch,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
 
 
+library(car)
+subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+```
 
+I added the model perch and it appears that the best two kind of plots to find the weight would be to use height and width. 
 
 
 
