@@ -83,3 +83,17 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
 
 In this model using Bream it appears the best two variables to use would be length 2 and height.
 
+```{r}
+which.max(summary.out$adjr2)
+```
+
+```{r}
+summary.out$which[2,]
+```
+
+Using the summary plot it shows that the best two variable to use are length 2 and height. 
+
+
+
+
+
