@@ -40,13 +40,20 @@ regsubsets.out <-
                force.in = NULL, force.out = NULL,
                method = "exhaustive")
 
-
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
 library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
 
 I added the model perch and it appears that the best two kind of plots to find the weight would be to use height and width. 
 
+```{r}
+which.max(summary.out$adjr2)
+```
 
+```{r}
+summary.out$which[2,]
+```
 
-
+Using the summary, it states that the best two variables to use are height and width.
